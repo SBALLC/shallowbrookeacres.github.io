@@ -132,3 +132,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
+/* Style the Facebook icon */
+.social-link i {
+    margin-right: 8px;
+}
