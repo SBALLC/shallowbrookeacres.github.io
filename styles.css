@@ -3,95 +3,89 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f8f8f8;
 }
 
-/* Header with Background Image */
+/* Header */
 header {
-    background: url('images/header-placeholder.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('images/header-placeholder.jpg') no-repeat center center/cover;
+    color: white;
     text-align: center;
-    color: white;
-    padding: 60px 20px;
+    padding: 100px 20px;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: white;
-}
-
-header p {
-    font-size: 1.2em;
-    color: white;
-}
-
-/* Navigation */
+/* Navigation Bar */
 nav {
     background: #093453;
-    padding: 10px;
-    text-align: center;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
+/* Menu Button (Hidden on Desktop) */
+.menu-toggle {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Nav List */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #009ED1;
+    border-radius: 5px;
+}
+
+/* Mobile: Hide Nav by Default */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #093453;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
 }
 
 /* Sections */
 section {
-    padding: 40px 20px;
-    text-align: center;
+    padding: 50px;
 }
 
 h2 {
     color: #093453;
-}
-
-/* Product Display */
-.product {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-}
-
-.product img {
-    max-width: 45%;
-    height: auto;
-    margin: 5px;
-    border-radius: 8px;
-}
-
-/* Events Section */
-.event-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.event {
-    background: #009ED1;
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 300px;
 }
 
 /* Footer */
@@ -99,5 +93,5 @@ footer {
     background: #093453;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
