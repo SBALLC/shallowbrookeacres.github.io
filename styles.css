@@ -1,32 +1,94 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #333;
+    background-color: #f8f8f8;
 }
+
+/* Header with Background Image */
 header {
-    background-color: #093453;
+    background: url('images/header-placeholder.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
     color: white;
-    padding: 20px;
+    padding: 60px 20px;
 }
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation */
+nav {
+    background: #093453;
+    padding: 10px;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-nav a {
-    text-decoration: none;
-    color: #009ED1;
-}
-section {
-    padding: 20px;
-}
-footer {
-    background-color: #727477;
+
+nav ul li a {
     color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #093453;
+}
+
+/* Product Display */
+.product {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Contact Section */
+#contact a {
+    color: #009ED1;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #093453;
+    color: white;
+    text-align: center;
     padding: 10px;
 }
