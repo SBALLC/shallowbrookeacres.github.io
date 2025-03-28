@@ -100,11 +100,13 @@ h2 {
 }
 
 /* Events Block Styling */
+
 .event {
-    background: #f8f8f8;
+    background: #009ED1;
+    color: white;
     padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #009ED1;
+    margin: 10px;
+    border-radius: 8px;
 }
 
 /* Header image */
