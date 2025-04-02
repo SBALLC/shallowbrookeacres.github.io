@@ -97,16 +97,24 @@ h2 {
 /* Product Layout */
 .product {
     margin-bottom: 30px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Events Block Styling */
-
 .event {
     background: #009ED1;
     color: white;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Header image */
@@ -115,26 +123,15 @@ h2 {
     height: auto;
 }
 
-/* Product images */
-.product img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Make all images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Footer, other sections, and additional styles */
+/* Footer */
 footer {
     background: #093453;
     color: white;
     text-align: center;
     padding: 20px;
 }
-/* Style the Facebook icon */
+
+/* Social Media Links */
 .social-link i {
     margin-right: 8px;
 }
