@@ -1,36 +1,133 @@
-/* General Styles */
+:root {
+  --navy: #093453;
+  --blue: #009ED1;
+  --gray: #727477;
+  --orange: #FF6700;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  background-color: #f7f9fb;
+  color: var(--navy);
+  line-height: 1.6;
 }
 
-/* Header */
 header {
-    background: url('IMG_5023.jpeg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    height: 250px;
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 3px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Collapsed menu for mobile */
+.nav-collapsed {
+  display: none;
+}
+
+nav.nav-expanded {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
     display: flex;
-    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
     align-items: center;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
 }
 
-.header-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
 }
 
-/* Navigation Bar */
-nav {
-    background: #093453;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+.card {
+  background: var(--white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
-/
+.card h2 {
+  color: var(--orange);
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.fb-placeholder {
+  background-color: #f0f2f5;
+  border: 2px dashed var(--blue);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+footer {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
