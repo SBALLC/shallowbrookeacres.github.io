@@ -16,9 +16,14 @@ body {
 }
 
 header {
-  background: var(--navy);
+  position: relative;
+  background: var(--navy) url('header-bg.jpg') center/cover no-repeat;
   color: var(--white);
-  box-shadow: 0 4px 6px var(--shadow);
+}
+
+header .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+  padding: 1rem 0;
 }
 
 .header-top {
