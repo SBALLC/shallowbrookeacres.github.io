@@ -166,6 +166,35 @@ main {
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 5px;
+}.sold-out-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.sold-out-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sold-out-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .fb-placeholder {
