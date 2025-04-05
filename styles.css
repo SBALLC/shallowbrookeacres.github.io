@@ -119,6 +119,22 @@ main {
   margin-top: 1rem;
   box-shadow: 0 2px 6px var(--shadow);
 }
+.sold-out {
+  position: relative;
+}
+
+.sold-out::after {
+  content: "SOLD OUT";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 24px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
 .fb-placeholder {
   background-color: #f0f2f5;
