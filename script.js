@@ -1,19 +1,29 @@
-// Toggle menu for mobile
-function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("show");
-}
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
 
-// IntersectionObserver for fade-in effect
-document.addEventListener("DOMContentLoaded", () => {
-    const fadeElements = document.querySelectorAll(".fade-in");
-    
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('nav-expanded');
+    navMenu.classList.toggle('nav-collapsed');
+  });
+
+  // Smooth scrolling for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
         });
-    });
 
-    fadeElements.forEach(element => observer.observe(element));
+        // Close the menu if it's open (for mobile)
+        if (navMenu.classList.contains('nav-expanded')) {
+          navMenu.classList.remove('nav-expanded');
+          navMenu.classList.add('nav-collapsed');
+        }
+      }
+    });
+  });
 });
