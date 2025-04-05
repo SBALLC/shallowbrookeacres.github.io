@@ -32,6 +32,16 @@ header .overlay {
   align-items: center;
   padding: 1rem;
 }
+.header-text {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .menu-btn {
   display: none;
