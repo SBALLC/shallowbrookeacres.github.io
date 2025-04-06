@@ -25,6 +25,7 @@ header {
 header .overlay {
   background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
   padding: 1rem 0;
+  height: 450px;
 }
 
 .header-top {
@@ -32,6 +33,7 @@ header .overlay {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 450px;
 }
 .header-text {
   text-align: center;
