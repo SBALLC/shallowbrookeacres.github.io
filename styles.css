@@ -19,6 +19,7 @@ header {
   position: relative;
   background: var(--navy) url('IMG_5023.jpeg') center/cover no-repeat;
   color: var(--white);
+  height: 450px;
 }
 
 header .overlay {
